@@ -24,6 +24,11 @@
         <strong class="col-2"> Nom d'utilisateur:</strong>
         <span th:text="${user.username}"></span>
     </div>
+    <div>
+        <a th:href="@{/login}">
+            <button class="btn btn-light">Se connecter</button>
+        </a>
+    </div>
 </div>
 </body>
 </html>

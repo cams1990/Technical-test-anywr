@@ -37,11 +37,6 @@ public class AuthController {
         return "registerForm";
     }
 
-    @GetMapping("/retrieveUserInfo")
-    public String retrieveUserInfoForm() {
-        return "retrieveUserInfo";
-    }
-
     @PostMapping("/createUser")
     public String createUserForm(User user) {
         BCryptPasswordEncoder bCryptPasswordEncoder = new BCryptPasswordEncoder();
@@ -49,11 +44,6 @@ public class AuthController {
         user.setPassword(encodedPassword);
         userRepository.save(user);
         return "registerSuccess";
-    }
-
-    @GetMapping("/userInfo")
-    public String getUserInfo(Model model) {
-        return "userInfo";
     }
 
 }
